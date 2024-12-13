@@ -8,18 +8,18 @@ const plans = [
   {
     name: "Basic",
     price: 800,
-    features: ["4 YouTube videos per month", "4 Shorts per month", "YouTube Thumbnails", "Video running time: 8 mins", "24/7 assistance via WhatsApp", "Basic SEO optimization", "Content calendar", "Monthly performance reports"],
+    features: ["4 YouTube videos per month", "4 Shorts per month", "YouTube Thumbnails", "Basic SEO (On-page optimization)", "Content calendar", "Basic social media posts design (Facebook, Instagram)", "Logo design (Basic)", "Monthly performance ,reports", "24/7 assistance via WhatsApp", "Website maintenance & updates", "GMB optimization"],
   },
   {
     name: "Professional",
     price: 1600,
     popular: true,
-    features: ["8 YouTube videos per month", "8 Shorts per month", "YouTube Thumbnails", "Shorts Thumbnails", "Video running time: 15 mins", "24/7 assistance via WhatsApp", "Advanced SEO optimization", "Live Updates via dedicated CRM", "Content strategy calls", "Social media management"],
+    features: ["8 YouTube videos per month", "8 Shorts per month", "YouTube Thumbnails & Shorts Thumbnails", "Advanced SEO (On-page & Off-page optimization)", "Content strategy calls", "Social media management (Facebook, Instagram)", "Video editing (Long-form & Shorts)", "Custom logo design", "Monthly performance reports with detailed analytics", "Custom graphics design", "Email marketing setup"],
   },
   {
     name: "Enterprise",
     price: 3500,
-    features: ["16 YouTube videos per month", "16 Shorts per month", "YouTube Thumbnails", "Shorts Thumbnails", "A/B Thumbnail Split Test", "Advanced SEO optimization", "Max video length: 15 minutes", "24/7 assistance via WhatsApp", "Content strategy calls", "Generate Hooks", "Live Updates via dedicated CRM", "Priority support"],
+    features: ["16 YouTube videos per month", "16 Shorts per month", "YouTube Thumbnails & Shorts Thumbnails", "A/B Thumbnail Split Test", "Comprehensive SEO (On-page & Off-page optimization)", "Max video length: 15 minutes", "Priority support 24/7", "Content strategy calls & custom SEO titles", "Full social media management (Facebook, Instagram)", "Advanced video editing (with custom hooks & effects)", "Custom graphics and post design", "Website maintenance & updates", "Email marketing campaigns", "Custom logo design (Advanced)", "Branding and identity consultation"],
   },
 ];
 
@@ -32,12 +32,12 @@ export function PricingSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div className="text-center mb-24" initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
           <h2 className="text-5xl md:text-6xl font-bold mb-4">Choose what works for you</h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">Whether you design alone or with a team, we have a plan that fits your needs, including custom design systems.</p>
+          <p className="text-xl text-gray-400 max-w-2xl mx-auto">Whether you're starting small or scaling your business, our plans offer everything you need to succeed online, from SEO to content creation and branding.</p>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {plans.map((plan, index) => (
-            <motion.div key={plan.name} className={`relative bg-zinc-900/50 backdrop-blur-sm rounded-xl p-8 ${plan.popular ? "border-2 border-emerald-400" : ""}`} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.2 }}>
+            <motion.div key={plan.name} className={`h-max relative bg-zinc-900/50 backdrop-blur-sm rounded-xl p-8 ${plan.popular ? "border-2 border-emerald-400" : ""}`} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ duration: 0.5, delay: index * 0.2 }}>
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 min-w-[300px] mx-auto">
                   <span className="bg-emerald-400 text-black text-sm font-bold px-3 py-1 rounded-full w-full">MOST RECOMMENDED</span>
