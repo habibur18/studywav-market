@@ -9,8 +9,6 @@ import { useState } from "react";
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const handleClick = () => {
-    // open new tab navigate to whatsapp link
-    // https://wa.me/+8801714515574
     window.open("https://wa.me/+8801714515574", "_blank");
   };
   return (
